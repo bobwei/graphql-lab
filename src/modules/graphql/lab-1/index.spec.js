@@ -2,8 +2,6 @@ import R from 'ramda';
 import { graphql, buildSchema } from 'graphql';
 
 import executable from './index';
-import resolver from './resolver';
-import schema from './schema';
 
 it('can execute query', () => {
   const query = `
