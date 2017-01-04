@@ -1,3 +1,3 @@
-# Javascript Project Template
+# GraphQL Lab
 
-This is a javascript project template with batteries included to speed up project initiation.
+Hands-on lab with GraphQL.
