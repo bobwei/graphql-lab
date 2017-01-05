@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  lab-4:
+    build:
+      context: .
+      dockerfile: ./src/modules/graphql/lab-4/Dockerfile
+    ports:
+      - 4000:4000
+    env_file: ./src/modules/graphql/lab-4/.env
