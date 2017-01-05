@@ -3,6 +3,7 @@ import {
   GraphQLList,
   GraphQLString,
 } from 'graphql';
+import R from 'ramda';
 
 const AppType = new GraphQLObjectType({
   name: 'AppType',
@@ -18,11 +19,18 @@ const GraphQLFieldConfigMap = {
     args: {
       q: { type: GraphQLString },
     },
-    resolve() {
-      return [
+    resolve(_, { q }) {
+      const data = [
         { id: 1, name: 'ABC' },
         { id: 2, name: 'Hello World' },
       ];
+      return R.filter(
+        R.anyPass([
+          R.propEq('id', q),
+          R.propEq('name', q),
+          R.always(R.isNil(q)),
+        ]),
+      )(data);
     },
   },
 };

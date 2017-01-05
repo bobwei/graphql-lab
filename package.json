@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "babel-node index.js",
+    "start:lab-4": "babel-node src/modules/graphql/lab-4/server.js"
   },
   "author": "bob61016@gmail.com",
   "license": "MIT",
@@ -21,6 +22,9 @@
     "jest": "^18.1.0"
   },
   "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "express-graphql": "^0.6.1",
     "graphql": "^0.8.2",
     "graphql-tools": "^0.8.4",
     "ramda": "^0.23.0"
