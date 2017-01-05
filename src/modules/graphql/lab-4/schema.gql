@@ -1,0 +1,12 @@
+schema {
+  query: RootQueryType
+}
+
+type App {
+  id: String
+  name: String
+}
+
+type RootQueryType {
+  allApps(q: String): [App]
+}
